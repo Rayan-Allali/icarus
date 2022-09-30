@@ -1,0 +1,27 @@
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Section = () => {
+    return ( 
+        <div className="warming-page">
+          <p className="transition">The myth gave rise to the idiom:
+            <span className="quote-two"> "Don't fly too close to the sun" </span>
+            This was back then when no human-made object could touch the sun
+          </p>
+          <p className="transition-two">
+            but today we say:
+            <span className="quote-three">"Make it towards the sun"</span>
+          </p> 
+          <div className="last-one">
+            <img className="sat-icon" src="images/sat.png"  />
+            <img className="line" src="images/dashed-line.png"  />
+            <img className="line" src="images/dashed-line.png"  />
+            <img className="line" src="images/dashed-line.png"  />
+            <img className="line" src="images/dashed-line.png"  />
+            <div className="sun-two"></div>
+          </div>
+        </div>
+     );
+}
+ 
+export default Section;
