@@ -1,5 +1,3 @@
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
 
 const Section = () => {
     return ( 
