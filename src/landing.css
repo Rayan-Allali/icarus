@@ -2,66 +2,85 @@
 @tailwind components;
 
 @layer utilities {
-    body {
+    * { 
       margin: 0;
-      padding: 0;
-      background-color: black;
-      overflow-X: hidden;
+      box-sizing: border-box;
+    } 
+    html{
+      position: relative;
+    }
+    html,body {
+      min-height: 100%;
+      width: 100%;
+    }
+    .body{
+      margin-bottom: 170px;
+      background-color: red;
+    }
+    #root{
+      height: 100%;
+      width: 100%;
     }
     .landing-page{
-      height:200vh;
-      width: 100vw;
-      display:flex;
-      justify-content: center;
-      align-items: center;
+      height: 200vh; 
+      width: 100%; 
     }
-    /* .background {
-      height:200vh;
-      width: 100%;
-    } */
     .logo{
       color:white;
-      font-size:2rem;
+      font-size:2.3rem;
       position: absolute;
       top: 15px;
       left: 25px;
       text-transform: uppercase;
     }
+    .headline {
+      display: flex;
+      flex-direction: column;
+    }
     .title{
-      position: absolute;
-      top:30vh;
-      font-size: 3rem;
+      font-size: 5rem;
       color:white;
-      opacity: .8;
+      margin-top: 4rem; 
+      padding:2rem;
+      text-align: center;
+      font-family: 'Chakra Petch', sans-serif;
+    }
+    .quote {
+      font-size: 2rem;
+      text-align: center;   
+      color:silver;
+      opacity: .9;
+      font-family: 'Poppins', sans-serif;
     }
     .read-more {
       position: absolute;
       top:23vh;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color:white;
       opacity: .8;
+      font-family: 'Poppins', sans-serif;
+    }
+    .scroll {
+      position: absolute;
+      width: 4%;
+      top:30vh;
     }
     .sun {
       background:linear-gradient(165.1deg, #FF9D1E 10.51%, #FF8551 89.38%);
-      /* margin-top: 6rem; */
-      width: 900px;
+      width: calc((100vw * 900px)/1280);
       height: 900px;
       border-radius: 50%;
-      position: absolute;
-      top: 50vh;
-      left:12vw;
+      margin: 5rem calc((100vw - 900px)/2); 
       transform: translateY(45px);
       outline : 2px dashed #FF9D1E;
       box-shadow: inset 0 5px 30px #F8A50E, 0 0 50px #F8A50E;
-      outline-offset: 33px;
+      outline-offset: 40px;
       display:flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
-    .sun:hover {
-      box-shadow: 0 0 50px #FF9D1E;
-    }
-    .sat {
+    .rotating-sat {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -72,62 +91,102 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
-    .sat:before {
-      content: '';
-      width: 40px;
-      height: 40px;
-      background-color: silver;
-      border:2px dashed black;
-      outline:4px solid black;
-      outline-offset: -10px;
-      position: absolute;
-      left: 50px;
-      top: 50px;
-      border-radius: 50%;
-      margin: 36px;
-      z-index: 50;
-      box-shadow: inset 0 5px 30px silver, 0 0 70px silver;
-    }
-    .sat:after {
-      content: '';
-      width: 25px;
-      height: 80px;
-      border:2px dashed black;
-      position: absolute;
-      background-color: silver;
-      top: 50px;
-      left: 73px;
-      transform: rotate(45deg);
-      margin:20px;
+    .sat {
+      margin: 0px;
+      width:12%;
     }
     @keyframes rotation {
       0% {
         transform: translate(-50%, -50%) rotate(-360deg);
       }
     }
-    .scroll {
-      position: absolute;
-      width: 5%;
-      top:30vh;
+    .introduction {
+      margin-top:2rem;
     }
     .intro-title {
-      position: absolute;
-      font-size: 1.6rem;
+      font-size: 2rem;
       color: red;
-      font-family: monospace,arial,sans-serif;
-      top:60vh;
+      text-align: center;
+      font-family: 'Chakra Petch', sans-serif;
     }
     .intro {
-      position: absolute;
+      margin-top: 2rem;
       font-size: 1.3rem;
+      max-width:800px;
       color:white;
-      font-family: system font, arial bold, helvetica, sans-serif;
-      max-width: 60vw;
-      top:70vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /*media queries*/
+    @media (max-width:950px) {
+      .landing-page{
+        height: 150vh;
+      }
+      .title {
+        font-size: 2rem;
+      }
+      .quote {
+        font-size: 1.4rem;
+        text-align:center;
+      }
+      .sun {
+        width : 300px;
+        height: 300px;
+        margin-left:30%;
+      }
+      .sun-two {
+        height:100px;
+        width:100px;
+      }
+      .sat , .sat:after , .sat:before {
+        display:none;
+      }
+      .introduction {
+        margin: 0 4rem;
+        border-radius: .5rem;
+        position: absolute;
+        width: 100vw;
+        top:50vh;
+        background-color: white;
+      }
+      .intro-title {
+        font-size: 1.6rem;
+      }
+      .intro {
+        font-size: 1.2rem;
+        color:black;
+        margin: 0 1rem;
+      }
+      .scroll {
+        top:50%;
+        width:10%;
+      }
+      .read-more {
+        top: 40%;
+      }
+    }
+    @media (max-width:450px) {
+      .title {
+        font-size: 1.7rem; 
+      }
+      .quote {
+        font-size: 1.2rem;
+      }
+      .sun {
+        width : 250px;
+        height: 250px;
+        margin-left:15%; 
+      }
+      .intro-title {
+        font-size: 1rem;
+      }
+      .intro {
+        font-size: .8rem
+      }
     }
     
    /* the css of the  background */ 
-    .bg {
+  .bg {
       background: url(https://i.postimg.cc/BZRXp4W3/bag.jpg) no-repeat;
       background-size: cover;
       height: 100%;
@@ -137,57 +196,57 @@
       left: 0;
       z-index: -3;
   }
-  .bg:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #000;
-      position: fixed;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      opacity: 0.3;
-  }
-  @keyframes sf-fly-by-1 {
-      from {
-          transform: translateZ(-600px);
-          opacity: 0.5;
-      }
-      to {
-          transform: translateZ(0);
-          opacity: 0.5;
-      }
-  }
-  @keyframes sf-fly-by-2 {
-      from {
-          transform: translateZ(-1200px);
-          opacity: 0.5;
-      }
-      to {
-          transform: translateZ(-600px);
-          opacity: 0.5;
-      }
-  }
-  @keyframes sf-fly-by-3 {
-      from {
-          transform: translateZ(-1800px);
-          opacity: 0.5;
-      }
-      to {
-          transform: translateZ(-1200px);
-          opacity: 0.5;
-      }
-  }
-  .star-field {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      perspective: 600px;
-      -webkit-perspective: 600px;
-      z-index: -1;
-  }
+    .bg:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: 0.3;
+    }
+    @keyframes sf-fly-by-1 {
+        from {
+            transform: translateZ(-600px);
+            opacity: 0.5;
+        }
+        to {
+            transform: translateZ(0);
+            opacity: 0.5;
+        }
+    }
+    @keyframes sf-fly-by-2 {
+        from {
+            transform: translateZ(-1200px);
+            opacity: 0.5;
+        }
+        to {
+            transform: translateZ(-600px);
+            opacity: 0.5;
+        }
+    }
+    @keyframes sf-fly-by-3 {
+        from {
+            transform: translateZ(-1800px);
+            opacity: 0.5;
+        }
+        to {
+            transform: translateZ(-1200px);
+            opacity: 0.5;
+        }
+    }
+    .star-field {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        perspective: 600px;
+        -webkit-perspective: 600px;
+        z-index: -1;
+    }
   .star-field .layer {
       box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
           524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
@@ -215,7 +274,7 @@
     }
     .star-field .layer:nth-child(3) {
         animation: sf-fly-by-3 5s linear infinite;
-    }
+    } 
   }
   
 @tailwind utilities;
