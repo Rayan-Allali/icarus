@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+
+@layer utilities { 
+.section-title{
+  @apply text-[#DD361C] font-bold text-2xl lg:text-[48px];
+}
+.section{
+  @apply flex flex-col md:flex-row gap-14 md:pb-[280px] 
+}
+.text-p{
+  @apply text-sm sm:text-lg  lg:text-2xl
+}
+  }
+@tailwind utilities;
+

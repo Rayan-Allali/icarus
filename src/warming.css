@@ -66,6 +66,7 @@
   @media (max-width:950px) {
     .warming-page {
       height: 100vh;
+      padding-top:60vh
     }
     .transition {
       margin-top:0rem;
