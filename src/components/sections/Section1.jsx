@@ -1,18 +1,14 @@
-
-import { motion } from 'framer-motion'
 import {FcNext} from 'react-icons/fc'
 const Section = ({attribute , updateState}) => {
    return(
     <div>
       {    <div id={attribute.id} className={`relative pt-10 text-white ${!attribute.visibillity && "hidden"}`}>
                     {attribute.visibillity &&  <div className="section1 px-[40px] " key={attribute.id}>
-                    <motion.svg className='hidden md:inline absolute left-[-20px] top-[2vh] ' width="60" height="99%" viewBox="0 0 50 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <motion.path  initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{duration:1 }} d="M24.9358 29.9841L24.9358 5043.02" stroke="#105BD8" stroke-width="3"/>
+                    <svg className='hidden md:inline absolute left-[-20px] top-[2vh] ' width="60" height="99%" viewBox="0 0 50 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path  d="M24.9358 29.9841L24.9358 5043.02" stroke="#105BD8" stroke-width="3"/>
                         <circle cx="25" cy="25" r="25" fill="#105BD8"/>
                         <circle cx="25" cy="25" r="12" fill="#212121"/>
-                     </motion.svg>
+                     </svg>
                            <div>
                            <h1  className="section-title md:pt-5 mb-5">{attribute.title}</h1>
                            <div className="section mb-20 md:mb-0">
@@ -20,7 +16,7 @@ const Section = ({attribute , updateState}) => {
                     <p className='text-p'>{attribute.text[0]}</p>
                     </div>
                     <div className="md:w-[40%] w-full img1">
-                    <motion.img className='w-full' src={attribute.img[0]} alt="img" />
+                    <img className='w-full' src={attribute.img[0]} alt="img" />
                     </div>
                     </div>
                            </div>
@@ -29,7 +25,7 @@ const Section = ({attribute , updateState}) => {
                         <p className='text-p'>{attribute.text[1]}</p>
                      </div>
                      <div className="img12 md:w-[40%]">
-                     <motion.img className='w-full' src={attribute.img[1]} alt="img" />
+                     <img className='w-full' src={attribute.img[1]} alt="img" />
                      </div>
                     </div>
                     <div className='section13 '>
