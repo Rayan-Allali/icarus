@@ -66,12 +66,16 @@
   @media (max-width:950px) {
     .warming-page {
       height: 100vh;
-      padding-top:60vh
+      padding-top:60vh;
+    padding-left:20px;
+    padding-right:20px
     }
     .transition {
       margin-top:0rem;
       font-size: 1.5rem;
       margin-bottom: -3rem;
+      width:100%
+   
     }
     .first-line,.last-line{
       display:none;

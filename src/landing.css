@@ -134,15 +134,18 @@
         display:none;
       }
       .introduction {
-        margin: 0 4rem;
+        margin-top: 0 4rem;
         border-radius: .5rem;
         position: absolute;
         width: 100vw;
         top:54vh;
         background-color: white;
+        padding:20px
       }
       .intro-title {
-        font-size: 1.6rem;
+        font-size:2rem;
+        font-weight:bold;
+        margin-bottom:10px
       }
       .intro {
         font-size: 1.2rem;
