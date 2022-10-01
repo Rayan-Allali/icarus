@@ -1,7 +1,3 @@
-import { motion ,useAnimation ,useInView } from 'framer-motion'
-import { useRef ,useEffect,useState } from 'react'
-
-
 export default function Sun() {
   // this is the landing page part
   return (
