@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import "./index.css"
 import Sections from './components/Sections';
 import Achivement from './components/Achivement';
 import { useState } from 'react';
@@ -14,16 +14,19 @@ const visibl=()=>{
   setVisible(true)
 }
   return (
-
-
-    <div className="bg-black lg:px-20 sm:px-5 md:px-10  py-5"> 
-    
- < Sections visibl={visibl}/> 
- {visible && <Achivement />}
- < Landing/>
+<div>
+  
+< Landing/>
       < Warming /> 
-      < Footer />
+      
+<div className=" lg:px-20 sm:px-5 md:px-10  py-5"> 
+    
+    < Sections visibl={visibl}/> 
+    {visible && <Achivement />}
+   </div>
+   {visible && < Footer />}
 </div>
+    
 
   );
 }

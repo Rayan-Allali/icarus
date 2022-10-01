@@ -25,14 +25,6 @@
       height: 200vh; 
       width: 100%; 
     }
-    .logo{
-      color:white;
-      font-size:2.3rem;
-      position: absolute;
-      top: 15px;
-      left: 25px;
-      text-transform: uppercase;
-    }
     .headline {
       display: flex;
       flex-direction: column;
@@ -146,7 +138,7 @@
         border-radius: .5rem;
         position: absolute;
         width: 100vw;
-        top:50vh;
+        top:54vh;
         background-color: white;
       }
       .intro-title {

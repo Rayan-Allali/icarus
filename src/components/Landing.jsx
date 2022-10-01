@@ -6,7 +6,6 @@ export default function Sun() {
   // this is the landing page part
   return (
     <div className="landing-page">
-      <h1 className='logo'>icarus</h1>
       <div className='headline'>
         <h1 className='title'>Parker Solar Probe Story</h1> 
         <h3 className="quote">wonderful journey to the sun</h3> 
@@ -14,9 +13,9 @@ export default function Sun() {
 
       <div className='sun'>
         <h3 className='read-more'>Scroll To Read</h3>
-        <img className='scroll' src="images/scrl.png" />
+        <img className='scroll' src="images/scrl.png" alt=""/>
         <div className="rotating-sat">
-          <img className='sat' src="images/sat.png"  />
+          <img className='sat' src="images/sat.png"  alt=""/>
         </div>
         <div className='introduction'>
           <p className="intro-title">When reaching the sun was a methodology</p> 

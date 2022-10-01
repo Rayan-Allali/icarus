@@ -3,7 +3,7 @@ import {FcNext} from 'react-icons/fc'
 const Section = ({attribute , updateState}) => {
    return(
     <div>
-      {    <div id={attribute.id} className={`relative pt-[50vh] text-white ${!attribute.visibillity && "hidden"}`}>
+      {    <div id={attribute.id} className={`relative pt-[10vh] md:pt-[50vh] text-white ${!attribute.visibillity && "hidden"}`}>
                     {attribute.visibillity &&  <div className="section2 px-[40px] " key={attribute.id}>
                     <svg className='hidden md:block absolute left-[-20px] top-[-10vh] ' width="60" height="104%" viewBox="0 0 50 100%" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <motion.path d="M24.9358 29.9841L24.9358 5043.02" stroke="#105BD8" stroke-width="3"

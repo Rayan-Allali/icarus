@@ -48,7 +48,7 @@ const Sections = ({visibl}) => {
         if(el === 2){visibl()}
     }
     return ( 
-        <div >
+        <div className="pt-40 md:pt-0">
                 <Section1 attribute={attributes[0]} updateState={updateState} />
                 <Section2 attribute={attributes[1]} updateState={updateState} />
                 <Section3 attribute={attributes[2]} updateState={updateState} />
