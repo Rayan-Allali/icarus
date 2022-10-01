@@ -1,12 +1,20 @@
 
 import './App.css';
-import Section from './components/Section';
-import Sun from './components/Sun';
-import bg from './images/bg.jpg'
+import Sections from './components/Sections';
+import Achivement from './components/Achivement';
+import { useState } from 'react';
 function App() {
+const [visible , setVisible]=useState(false)
+
+const visibl=()=>{
+  setVisible(true)
+}
   return (
-    <div className="bg1 p-4">
-< Section/>    
+
+    <div className="bg-black lg:px-20 sm:px-5 md:px-10  py-5"> 
+    
+ < Sections visibl={visibl}/> 
+ {visible && <Achivement />}
 
 </div>
   );
